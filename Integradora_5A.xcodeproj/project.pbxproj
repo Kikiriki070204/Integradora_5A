@@ -7,20 +7,42 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		886004812BBC981900E4CB76 /* AdminUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886004802BBC981900E4CB76 /* AdminUserViewController.swift */; };
+		886004832BBC98C400E4CB76 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886004822BBC98C400E4CB76 /* PerfilViewController.swift */; };
+		886004852BBC995200E4CB76 /* IncubadoraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886004842BBC995200E4CB76 /* IncubadoraViewController.swift */; };
+		886004862BBCA12D00E4CB76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8881A1902BA33EF900B2F5AE /* Assets.xcassets */; };
 		886462F62BB1F9EE004396A0 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886462F52BB1F9EE004396A0 /* LogInViewController.swift */; };
 		886462F82BB1FA09004396A0 /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886462F72BB1FA09004396A0 /* RegistroViewController.swift */; };
+		8870BB682BB4A0BB00CB1490 /* logosmartnest.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8870BB672BB4A0BB00CB1490 /* logosmartnest.jpeg */; };
+		8870BB6B2BB4AB5C00CB1490 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8870BB6A2BB4AB5C00CB1490 /* UserNotifications.framework */; };
+		8870BB6D2BB4AB6500CB1490 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8870BB6C2BB4AB6500CB1490 /* EventKit.framework */; };
+		8870BB6F2BB4AB7700CB1490 /* Contacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8870BB6E2BB4AB7700CB1490 /* Contacts.framework */; };
+		8870BB762BB4B32800CB1490 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870BB752BB4B32800CB1490 /* MenuViewController.swift */; };
+		8870BB782BB4B53D00CB1490 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8870BB772BB4B53D00CB1490 /* SplashViewController.swift */; };
 		8877E0802BA4B6A100BEEF4A /* smartnest.png in Resources */ = {isa = PBXBuildFile; fileRef = 8877E07E2BA4B6A100BEEF4A /* smartnest.png */; };
 		8881A1882BA33EF700B2F5AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8881A1872BA33EF700B2F5AE /* AppDelegate.swift */; };
 		8881A18A2BA33EF700B2F5AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8881A1892BA33EF700B2F5AE /* SceneDelegate.swift */; };
 		8881A18C2BA33EF700B2F5AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8881A18B2BA33EF700B2F5AE /* ViewController.swift */; };
 		8881A18F2BA33EF700B2F5AE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8881A18E2BA33EF700B2F5AE /* Base */; };
-		8881A1912BA33EF900B2F5AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8881A1902BA33EF900B2F5AE /* Assets.xcassets */; };
 		8881A1942BA33EF900B2F5AE /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 8881A1932BA33EF900B2F5AE /* Base */; };
+		88905AC72BBC694B00E076F4 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88905AC62BBC694B00E076F4 /* Usuario.swift */; };
+		88905AC92BBC852000E076F4 /* agregar.png in Resources */ = {isa = PBXBuildFile; fileRef = 88905AC82BBC851F00E076F4 /* agregar.png */; };
+		88905ACB2BBC85C400E076F4 /* Ellipse 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 88905ACA2BBC85C400E076F4 /* Ellipse 4.png */; };
+		88905ACD2BBC871900E076F4 /* Ellipse 4 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 88905ACC2BBC871900E076F4 /* Ellipse 4 (1).png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		886004802BBC981900E4CB76 /* AdminUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminUserViewController.swift; sourceTree = "<group>"; };
+		886004822BBC98C400E4CB76 /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
+		886004842BBC995200E4CB76 /* IncubadoraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncubadoraViewController.swift; sourceTree = "<group>"; };
 		886462F52BB1F9EE004396A0 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		886462F72BB1FA09004396A0 /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
+		8870BB672BB4A0BB00CB1490 /* logosmartnest.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = logosmartnest.jpeg; path = ../../../Downloads/logosmartnest.jpeg; sourceTree = "<group>"; };
+		8870BB6A2BB4AB5C00CB1490 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		8870BB6C2BB4AB6500CB1490 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
+		8870BB6E2BB4AB7700CB1490 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
+		8870BB752BB4B32800CB1490 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		8870BB772BB4B53D00CB1490 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		8877E07E2BA4B6A100BEEF4A /* smartnest.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = smartnest.png; sourceTree = "<group>"; };
 		8881A1842BA33EF700B2F5AE /* Integradora_5A.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Integradora_5A.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8881A1872BA33EF700B2F5AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +52,10 @@
 		8881A1902BA33EF900B2F5AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8881A1932BA33EF900B2F5AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8881A1952BA33EF900B2F5AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88905AC62BBC694B00E076F4 /* Usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
+		88905AC82BBC851F00E076F4 /* agregar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agregar.png; sourceTree = "<group>"; };
+		88905ACA2BBC85C400E076F4 /* Ellipse 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ellipse 4.png"; sourceTree = "<group>"; };
+		88905ACC2BBC871900E076F4 /* Ellipse 4 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ellipse 4 (1).png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,15 +63,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8870BB6D2BB4AB6500CB1490 /* EventKit.framework in Frameworks */,
+				8870BB6B2BB4AB5C00CB1490 /* UserNotifications.framework in Frameworks */,
+				8870BB6F2BB4AB7700CB1490 /* Contacts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8870BB692BB4AB5C00CB1490 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8870BB6E2BB4AB7700CB1490 /* Contacts.framework */,
+				8870BB6C2BB4AB6500CB1490 /* EventKit.framework */,
+				8870BB6A2BB4AB5C00CB1490 /* UserNotifications.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		8877E07F2BA4B6A100BEEF4A /* integradora_img */ = {
 			isa = PBXGroup;
 			children = (
+				88905ACC2BBC871900E076F4 /* Ellipse 4 (1).png */,
+				88905AC82BBC851F00E076F4 /* agregar.png */,
+				88905ACA2BBC85C400E076F4 /* Ellipse 4.png */,
+				8870BB672BB4A0BB00CB1490 /* logosmartnest.jpeg */,
 				8877E07E2BA4B6A100BEEF4A /* smartnest.png */,
 			);
 			name = integradora_img;
@@ -57,6 +100,7 @@
 			children = (
 				8881A1862BA33EF700B2F5AE /* Integradora_5A */,
 				8881A1852BA33EF700B2F5AE /* Products */,
+				8870BB692BB4AB5C00CB1490 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,8 +119,14 @@
 				8881A1892BA33EF700B2F5AE /* SceneDelegate.swift */,
 				8881A18B2BA33EF700B2F5AE /* ViewController.swift */,
 				8881A18D2BA33EF700B2F5AE /* Main.storyboard */,
+				8870BB752BB4B32800CB1490 /* MenuViewController.swift */,
+				886004842BBC995200E4CB76 /* IncubadoraViewController.swift */,
+				88905AC62BBC694B00E076F4 /* Usuario.swift */,
+				886004802BBC981900E4CB76 /* AdminUserViewController.swift */,
+				886004822BBC98C400E4CB76 /* PerfilViewController.swift */,
 				886462F52BB1F9EE004396A0 /* LogInViewController.swift */,
 				886462F72BB1FA09004396A0 /* RegistroViewController.swift */,
+				8870BB772BB4B53D00CB1490 /* SplashViewController.swift */,
 				8877E07F2BA4B6A100BEEF4A /* integradora_img */,
 				8881A1902BA33EF900B2F5AE /* Assets.xcassets */,
 				8881A1922BA33EF900B2F5AE /* LaunchScreen.storyboard */,
@@ -143,9 +193,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8881A1912BA33EF900B2F5AE /* Assets.xcassets in Resources */,
+				88905ACD2BBC871900E076F4 /* Ellipse 4 (1).png in Resources */,
+				88905ACB2BBC85C400E076F4 /* Ellipse 4.png in Resources */,
+				8870BB682BB4A0BB00CB1490 /* logosmartnest.jpeg in Resources */,
 				8877E0802BA4B6A100BEEF4A /* smartnest.png in Resources */,
+				88905AC92BBC852000E076F4 /* agregar.png in Resources */,
 				8881A1942BA33EF900B2F5AE /* Base in Resources */,
+				886004862BBCA12D00E4CB76 /* Assets.xcassets in Resources */,
 				8881A18F2BA33EF700B2F5AE /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,9 +213,15 @@
 			files = (
 				886462F62BB1F9EE004396A0 /* LogInViewController.swift in Sources */,
 				8881A18C2BA33EF700B2F5AE /* ViewController.swift in Sources */,
+				886004812BBC981900E4CB76 /* AdminUserViewController.swift in Sources */,
+				8870BB762BB4B32800CB1490 /* MenuViewController.swift in Sources */,
+				886004852BBC995200E4CB76 /* IncubadoraViewController.swift in Sources */,
+				886004832BBC98C400E4CB76 /* PerfilViewController.swift in Sources */,
 				8881A1882BA33EF700B2F5AE /* AppDelegate.swift in Sources */,
 				886462F82BB1FA09004396A0 /* RegistroViewController.swift in Sources */,
 				8881A18A2BA33EF700B2F5AE /* SceneDelegate.swift in Sources */,
+				88905AC72BBC694B00E076F4 /* Usuario.swift in Sources */,
+				8870BB782BB4B53D00CB1490 /* SplashViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,14 +373,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W34S89NP53;
+				DEVELOPMENT_TEAM = BK72F2PMQG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Integradora_5A/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SmartNest;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -341,14 +403,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = W34S89NP53;
+				DEVELOPMENT_TEAM = BK72F2PMQG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Integradora_5A/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SmartNest;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
