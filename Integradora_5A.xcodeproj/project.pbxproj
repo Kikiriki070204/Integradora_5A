@@ -13,6 +13,7 @@
 		886004862BBCA12D00E4CB76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8881A1902BA33EF900B2F5AE /* Assets.xcassets */; };
 		886462F62BB1F9EE004396A0 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886462F52BB1F9EE004396A0 /* LogInViewController.swift */; };
 		886462F82BB1FA09004396A0 /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886462F72BB1FA09004396A0 /* RegistroViewController.swift */; };
+		886B32442BBF341F00767E0A /* VerificarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886B32432BBF341F00767E0A /* VerificarViewController.swift */; };
 		8870BB682BB4A0BB00CB1490 /* logosmartnest.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8870BB672BB4A0BB00CB1490 /* logosmartnest.jpeg */; };
 		8870BB6B2BB4AB5C00CB1490 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8870BB6A2BB4AB5C00CB1490 /* UserNotifications.framework */; };
 		8870BB6D2BB4AB6500CB1490 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8870BB6C2BB4AB6500CB1490 /* EventKit.framework */; };
@@ -37,6 +38,7 @@
 		886004842BBC995200E4CB76 /* IncubadoraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncubadoraViewController.swift; sourceTree = "<group>"; };
 		886462F52BB1F9EE004396A0 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		886462F72BB1FA09004396A0 /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
+		886B32432BBF341F00767E0A /* VerificarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificarViewController.swift; sourceTree = "<group>"; };
 		8870BB672BB4A0BB00CB1490 /* logosmartnest.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = logosmartnest.jpeg; path = ../../../Downloads/logosmartnest.jpeg; sourceTree = "<group>"; };
 		8870BB6A2BB4AB5C00CB1490 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		8870BB6C2BB4AB6500CB1490 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
@@ -121,6 +123,7 @@
 				8881A18D2BA33EF700B2F5AE /* Main.storyboard */,
 				8870BB752BB4B32800CB1490 /* MenuViewController.swift */,
 				886004842BBC995200E4CB76 /* IncubadoraViewController.swift */,
+				886B32432BBF341F00767E0A /* VerificarViewController.swift */,
 				88905AC62BBC694B00E076F4 /* Usuario.swift */,
 				886004802BBC981900E4CB76 /* AdminUserViewController.swift */,
 				886004822BBC98C400E4CB76 /* PerfilViewController.swift */,
@@ -213,6 +216,7 @@
 			files = (
 				886462F62BB1F9EE004396A0 /* LogInViewController.swift in Sources */,
 				8881A18C2BA33EF700B2F5AE /* ViewController.swift in Sources */,
+				886B32442BBF341F00767E0A /* VerificarViewController.swift in Sources */,
 				886004812BBC981900E4CB76 /* AdminUserViewController.swift in Sources */,
 				8870BB762BB4B32800CB1490 /* MenuViewController.swift in Sources */,
 				886004852BBC995200E4CB76 /* IncubadoraViewController.swift in Sources */,

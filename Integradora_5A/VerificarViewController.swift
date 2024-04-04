@@ -8,11 +8,13 @@
 import UIKit
 
 class VerificarViewController: UIViewController {
-
+  /*  var email: String!
+    var password: String!
+*/
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+      /*  print("Correo: \(email!)\nContraseña: \(password!)")
+        // Do any additional setup after loading the view.*/
     }
     
 
