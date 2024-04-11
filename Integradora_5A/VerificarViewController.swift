@@ -10,6 +10,7 @@ import UIKit
 class VerificarViewController: UIViewController {
     var email: String!
     var password: String!
+    let usuario = Usuario.sharedData()
 
     @IBOutlet weak var Errores_lbl: UILabel!
     @IBOutlet weak var Code: UITextField!
@@ -97,9 +98,16 @@ class VerificarViewController: UIViewController {
                             print("Respuesta JSON: \(responseJSON)")
                             
                             if httpResponse.statusCode == 200 {
-                                DispatchQueue.main.async {
-                                    self.performSegue(withIdentifier: "sgTab", sender: self)
+                                if let jsonDict = responseJSON as? [String: Any],
+                                   let token = jsonDict["access_token"] as? String
+                                {
+                                    DispatchQueue.main.async {
+                                        self.usuario.access_token = token
+                                        //print("USER DATA: \(self.usuario.access_token)")
+                                        self.performSegue(withIdentifier: "sgTab", sender: self)
+                                        self.usuario.save()}
                                 }
+                                    
                             } else {
                                 if httpResponse.statusCode == 401 {
                                     DispatchQueue.main.async {

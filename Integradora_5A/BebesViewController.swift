@@ -7,14 +7,17 @@
 
 import UIKit
 
+
 class BebesViewController: UIViewController {
+    
+    let usuario = Usuario.sharedData()
 
     @IBOutlet weak var scrBebes: UIScrollView!
     var bebes: [Bebe] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print(usuario.access_token)
         consultarBebes()
         
     }
@@ -22,10 +25,16 @@ class BebesViewController: UIViewController {
     
     func consultarBebes()
     {
+        let url = URL(string: "http://192.168.80.101:8000/api/bebes/list")!
+        let token = usuario.access_token
+        var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 50)
+        request.httpMethod = "GET"
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        
+        
         let conexion = URLSession(configuration: .default)
-        let url = URL(string: "https://192.168.80.101:8000/api/bebes/list")!
-        
-        
+
         func crearBebe(desde diccionario: [String: Any]) -> Bebe {
             let nombre = diccionario["nombre"] as! String
             let apellido = diccionario["apellido"] as! String
@@ -37,26 +46,45 @@ class BebesViewController: UIViewController {
             let idIncubadora = diccionario["id_incubadora"] as! Int
             
             return Bebe(nombre: nombre, apellido: apellido, sexo: sexo, fecha_nacimiento: fechaNacimiento, edad: edad, peso: peso, id_estado: idEstado, id_incubadora: idIncubadora)
+             
         }
         
-        conexion.dataTask(with: url) { datos, respuesta, error in
+        conexion.dataTask(with: request) { datos, respuesta, error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                return
+            }
+
+            guard let httpResponse = respuesta as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
+                print("Error en la respuesta del servidor")
+                return
+            }
+
+            guard let datos = datos else {
+                print("No se recibieron datos del servidor")
+                return
+            }
+
             do {
-                let json = try JSONSerialization.jsonObject(with: datos!) as! [String: Any]
-                let resultados = json["results"] as! [[String: Any]]
-                
-                for bebe in resultados {
-                    let nuevoBebe = crearBebe(desde: bebe)
-                    self.bebes.append(nuevoBebe)
-                }
-                
-                DispatchQueue.main.async {
-                    self.dibujarBebes()
+                let json = try JSONSerialization.jsonObject(with: datos, options: []) as? [String: Any]
+                if let json = json, let resultados = json["results"] as? [[String: Any]] {
+                    for bebe in resultados {
+                        let nuevoBebe = crearBebe(desde: bebe)
+                        self.bebes.append(nuevoBebe)
+                        print(nuevoBebe.nombre)
+                    }
+                    DispatchQueue.main.async {
+                        self.dibujarBebes()
+                    }
+                } else {
+                    print("El formato de los datos recibidos no es el esperado")
+                    print(json)
                 }
             } catch {
-                print("Algo salió mal =(")
+                print("Error al decodificar los datos JSON: \(error.localizedDescription)")
             }
         }.resume()
-        
+     
     }
     
     

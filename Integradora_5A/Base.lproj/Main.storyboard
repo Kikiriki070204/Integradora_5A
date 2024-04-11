@@ -824,7 +824,6 @@ Te hemos enviado un correo para que la actives. Cuando la hayas activado presion
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="NME-xT-ha6"/>
         <segue reference="29d-Ch-Gao"/>
         <segue reference="3Yr-Nu-eyR"/>
     </inferredMetricsTieBreakers>
