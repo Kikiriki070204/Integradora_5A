@@ -33,7 +33,6 @@ class RegistroViewController: UIViewController {
         
      
     }
-
     
     @IBAction func ocultarTeclado()
     {
@@ -133,13 +132,6 @@ class RegistroViewController: UIViewController {
     }
     
     
-    
-    
-    
-    
-    
-    
-    
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if identifier == "sgRegister" {
             if !hasErrors {
@@ -205,6 +197,9 @@ class RegistroViewController: UIViewController {
         return nil
     }
 
+    @IBAction func login(_ sender: UIButton) {
+        performSegue(withIdentifier: "LOGIN", sender: sender)
+    }
     func validateConfirmPassword(_ password: String, _ confirmPassword: String) -> String? {
         if password != confirmPassword {
             return "Las contraseñas no coinciden."

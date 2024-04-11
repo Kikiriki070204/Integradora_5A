@@ -30,6 +30,12 @@
 		88905AC92BBC852000E076F4 /* agregar.png in Resources */ = {isa = PBXBuildFile; fileRef = 88905AC82BBC851F00E076F4 /* agregar.png */; };
 		88905ACB2BBC85C400E076F4 /* Ellipse 4.png in Resources */ = {isa = PBXBuildFile; fileRef = 88905ACA2BBC85C400E076F4 /* Ellipse 4.png */; };
 		88905ACD2BBC871900E076F4 /* Ellipse 4 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 88905ACC2BBC871900E076F4 /* Ellipse 4 (1).png */; };
+		88B8A5C82BC7357100AD293F /* ActivarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8A5C72BC7357100AD293F /* ActivarViewController.swift */; };
+		88B8A5CA2BC73EE700AD293F /* Incubadora.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8A5C92BC73EE700AD293F /* Incubadora.swift */; };
+		88B8A5CC2BC73FD400AD293F /* DetalleIncuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8A5CB2BC73FD400AD293F /* DetalleIncuViewController.swift */; };
+		88B8A5CE2BC74F2200AD293F /* BebesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8A5CD2BC74F2200AD293F /* BebesViewController.swift */; };
+		88B8A5D02BC74F3900AD293F /* Bebe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8A5CF2BC74F3900AD293F /* Bebe.swift */; };
+		88B8A5D22BC75BD900AD293F /* baby_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B8A5D12BC75BD900AD293F /* baby_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +64,12 @@
 		88905AC82BBC851F00E076F4 /* agregar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = agregar.png; sourceTree = "<group>"; };
 		88905ACA2BBC85C400E076F4 /* Ellipse 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ellipse 4.png"; sourceTree = "<group>"; };
 		88905ACC2BBC871900E076F4 /* Ellipse 4 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ellipse 4 (1).png"; sourceTree = "<group>"; };
+		88B8A5C72BC7357100AD293F /* ActivarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivarViewController.swift; sourceTree = "<group>"; };
+		88B8A5C92BC73EE700AD293F /* Incubadora.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Incubadora.swift; sourceTree = "<group>"; };
+		88B8A5CB2BC73FD400AD293F /* DetalleIncuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleIncuViewController.swift; sourceTree = "<group>"; };
+		88B8A5CD2BC74F2200AD293F /* BebesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BebesViewController.swift; sourceTree = "<group>"; };
+		88B8A5CF2BC74F3900AD293F /* Bebe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bebe.swift; sourceTree = "<group>"; };
+		88B8A5D12BC75BD900AD293F /* baby_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baby_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +99,7 @@
 		8877E07F2BA4B6A100BEEF4A /* integradora_img */ = {
 			isa = PBXGroup;
 			children = (
+				88B8A5D12BC75BD900AD293F /* baby_icon.png */,
 				88905ACC2BBC871900E076F4 /* Ellipse 4 (1).png */,
 				88905AC82BBC851F00E076F4 /* agregar.png */,
 				88905ACA2BBC85C400E076F4 /* Ellipse 4.png */,
@@ -121,6 +134,8 @@
 				8881A1892BA33EF700B2F5AE /* SceneDelegate.swift */,
 				8881A18B2BA33EF700B2F5AE /* ViewController.swift */,
 				8881A18D2BA33EF700B2F5AE /* Main.storyboard */,
+				88B8A5CD2BC74F2200AD293F /* BebesViewController.swift */,
+				88B8A5CF2BC74F3900AD293F /* Bebe.swift */,
 				8870BB752BB4B32800CB1490 /* MenuViewController.swift */,
 				886004842BBC995200E4CB76 /* IncubadoraViewController.swift */,
 				886B32432BBF341F00767E0A /* VerificarViewController.swift */,
@@ -130,6 +145,9 @@
 				886462F52BB1F9EE004396A0 /* LogInViewController.swift */,
 				886462F72BB1FA09004396A0 /* RegistroViewController.swift */,
 				8870BB772BB4B53D00CB1490 /* SplashViewController.swift */,
+				88B8A5C72BC7357100AD293F /* ActivarViewController.swift */,
+				88B8A5C92BC73EE700AD293F /* Incubadora.swift */,
+				88B8A5CB2BC73FD400AD293F /* DetalleIncuViewController.swift */,
 				8877E07F2BA4B6A100BEEF4A /* integradora_img */,
 				8881A1902BA33EF900B2F5AE /* Assets.xcassets */,
 				8881A1922BA33EF900B2F5AE /* LaunchScreen.storyboard */,
@@ -197,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88905ACD2BBC871900E076F4 /* Ellipse 4 (1).png in Resources */,
+				88B8A5D22BC75BD900AD293F /* baby_icon.png in Resources */,
 				88905ACB2BBC85C400E076F4 /* Ellipse 4.png in Resources */,
 				8870BB682BB4A0BB00CB1490 /* logosmartnest.jpeg in Resources */,
 				8877E0802BA4B6A100BEEF4A /* smartnest.png in Resources */,
@@ -215,13 +234,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				886462F62BB1F9EE004396A0 /* LogInViewController.swift in Sources */,
+				88B8A5D02BC74F3900AD293F /* Bebe.swift in Sources */,
 				8881A18C2BA33EF700B2F5AE /* ViewController.swift in Sources */,
 				886B32442BBF341F00767E0A /* VerificarViewController.swift in Sources */,
+				88B8A5CA2BC73EE700AD293F /* Incubadora.swift in Sources */,
+				88B8A5CE2BC74F2200AD293F /* BebesViewController.swift in Sources */,
 				886004812BBC981900E4CB76 /* AdminUserViewController.swift in Sources */,
 				8870BB762BB4B32800CB1490 /* MenuViewController.swift in Sources */,
 				886004852BBC995200E4CB76 /* IncubadoraViewController.swift in Sources */,
 				886004832BBC98C400E4CB76 /* PerfilViewController.swift in Sources */,
+				88B8A5CC2BC73FD400AD293F /* DetalleIncuViewController.swift in Sources */,
 				8881A1882BA33EF700B2F5AE /* AppDelegate.swift in Sources */,
+				88B8A5C82BC7357100AD293F /* ActivarViewController.swift in Sources */,
 				886462F82BB1FA09004396A0 /* RegistroViewController.swift in Sources */,
 				8881A18A2BA33EF700B2F5AE /* SceneDelegate.swift in Sources */,
 				88905AC72BBC694B00E076F4 /* Usuario.swift in Sources */,

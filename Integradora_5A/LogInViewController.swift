@@ -24,15 +24,15 @@ class LogInViewController: UIViewController {
                 view.addGestureRecognizer(tapGesture)
     }
     
-   /* override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        let vc = segue.destination as! VerificarViewController
-        
-        vc.email = txtCorreo.text
-        vc.password = txtPassword.text
-        
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "sgVerify"
+        {
+            let vc =  segue.destination as! VerificarViewController
+            vc.email = txtCorreo.text
+            vc.password = txtPassword.text
+        }
+    
     }
-    */
     
     @IBAction func ocultarTeclado()
     {
@@ -120,32 +120,38 @@ class LogInViewController: UIViewController {
                 print("Código de estado HTTP recibido: \(httpResponse.statusCode)")
                 
                 do {
-                    let responseJSON = try JSONSerialization.jsonObject(with: data, options: [])
-                    print("Respuesta JSON: \(responseJSON)")
-                    
-                    if httpResponse.statusCode == 200 {  DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "sgVerify", sender: self)
-                    }
-                      
-                    } else if httpResponse.statusCode == 401 {
-                        DispatchQueue.main.async {
-                            self.showError(message: "Credenciales incorrectas")
-                        }
-                    } else if httpResponse.statusCode == 403 {
-                        DispatchQueue.main.async {
-                         self.showError(message: "Correo no verificado")
-                        }
-                    } else {
-                        if let jsonDict = responseJSON as? [String: Any],
-                           let message = jsonDict["message"] as? String {
-                            DispatchQueue.main.async {
-                                let error = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-                                let ok = UIAlertAction(title: "Aceptar", style: .default)
-                                error.addAction(ok)
-                                self.present(error, animated: true)
+                            let responseJSON = try JSONSerialization.jsonObject(with: data, options: [])
+                            print("Respuesta JSON: \(responseJSON)")
+                            
+                            if httpResponse.statusCode == 200 {
+                                DispatchQueue.main.async {
+                                    self.performSegue(withIdentifier: "sgVerify", sender: self)
+                                }
+                            } else {
+                                if httpResponse.statusCode == 401 {
+                                    DispatchQueue.main.async {
+                                        self.showError(message: "Credenciales incorrectas")
+                                    }
+                                } else if httpResponse.statusCode == 404 {
+                                    DispatchQueue.main.async {
+                                        self.showError(message: "Usuario no encontrado")
+                                    }
+                                } else if httpResponse.statusCode == 403 {
+                                    DispatchQueue.main.async {
+                                        self.showError(message: "Correo no verificado")
+                                    }
+                                } else {
+                                    if let jsonDict = responseJSON as? [String: Any],
+                                       let message = jsonDict["message"] as? String {
+                                        DispatchQueue.main.async {
+                                            let error = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+                                            let ok = UIAlertAction(title: "Aceptar", style: .default)
+                                            error.addAction(ok)
+                                            self.present(error, animated: true)
+                                        }
+                                    }
+                                }
                             }
-                        }
-                    }
                 } catch {
                     print("Error al convertir la respuesta a JSON: \(error)")
                 }
@@ -155,18 +161,6 @@ class LogInViewController: UIViewController {
         task.resume()
     }
  
-
-    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
-        if identifier == "sgVerify" {
-            if !hasErrors {
-                return true
-            }
-            
-            return false
-        }
-            
-        return true
-    }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -189,23 +183,9 @@ class LogInViewController: UIViewController {
     
         return newString.length <= maxLenght
     }
+  
     
-    func showWelcomeNotification() {
-        let content = UNMutableNotificationContent()
-        content.title = "¡Bienvenido a SmartNest!"
-        content.body = "¡Gracias por iniciar sesión!"
-        content.sound = UNNotificationSound.default
-        content.badge = 1
-        
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
-        let request = UNNotificationRequest(identifier: "welcomeNotification", content: content, trigger: trigger)
-        
-        UNUserNotificationCenter.current().add(request) { (error) in
-            if let error = error {
-                print("Error al agregar la solicitud de notificación de bienvenida: \(error.localizedDescription)")
-            }
-        }
-    }
+    
     
 
 }

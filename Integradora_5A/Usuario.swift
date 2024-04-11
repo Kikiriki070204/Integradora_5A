@@ -17,6 +17,9 @@ class Usuario: NSObject {
     var is_active: Bool
     var id_rol: Int
     var id_hospital: Int
+    var jwt: String
+    var signedRoute: String
+    var rememberMe: Bool
     
     static var usuario: Usuario!
     
@@ -29,6 +32,9 @@ class Usuario: NSObject {
         is_active = false
         id_rol = 5
         id_hospital = 1
+        jwt = ""
+        signedRoute = ""
+        rememberMe = false
     }
     static func sharedData()->Usuario {
         if usuario == nil {
@@ -37,6 +43,35 @@ class Usuario: NSObject {
         
         return usuario
     }
+    
+    func save() {
+           let userDefaults = UserDefaults.standard
+        userDefaults.set(id, forKey: "userId")
+        userDefaults.set(name, forKey: "name")
+        userDefaults.set(email, forKey: "email")
+        userDefaults.set(password, forKey: "password")
+        userDefaults.set(is_active, forKey: "is_active")
+        userDefaults.set(id_rol, forKey: "id_rol")
+        userDefaults.set(id_hospital, forKey: "id_hospital")
+        userDefaults.set(jwt, forKey: "jwt")
+        userDefaults.set(signedRoute, forKey: "signedRoute")
+        userDefaults.set(rememberMe, forKey: "rememberMe")
+        userDefaults.synchronize()
+       }
+       
+       func load() {
+           let userDefaults = UserDefaults.standard
+           id = userDefaults.integer(forKey: "userId")
+           name = userDefaults.string(forKey: "name") ?? ""
+           email = userDefaults.string(forKey: "email") ?? ""
+           password = userDefaults.string(forKey: "password") ?? ""
+           is_active = userDefaults.bool(forKey: "is_active")
+           id_rol = userDefaults.integer(forKey: "id_rol")
+           id_hospital = userDefaults.integer(forKey: "id_hospital")
+           jwt = userDefaults.string(forKey: "jwt") ?? ""
+           signedRoute = userDefaults.string(forKey: "signedRoute") ?? ""
+           rememberMe = userDefaults.bool(forKey: "rememberMe")
+       }
     
 
 }
