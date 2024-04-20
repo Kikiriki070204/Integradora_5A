@@ -7,15 +7,14 @@
 
 import UIKit
 
-class RegistroViewController: UIViewController {
-
+class RegistroViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource{
+    
+    var hospitales: [Hospital] = []
     @IBOutlet weak var Nombre: UITextField!
     @IBOutlet weak var Apellidos: UITextField!
-    
     @IBOutlet weak var Password: UITextField!
     @IBOutlet weak var Correo: UITextField!
     @IBOutlet weak var Password_conf: UITextField!
-    
     @IBOutlet weak var btnRegistrar: UIButton!
     @IBOutlet weak var hospital: UIPickerView!
     
@@ -28,10 +27,78 @@ class RegistroViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Errores_lbl.isHidden = true
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ocultarTeclado))
                 view.addGestureRecognizer(tapGesture)
+        Hospitaless()
         
      
+    }
+    func Hospitaless()
+    {
+        let conexion = URLSession(configuration: .default)
+        let url = URLManager.sharedInstance.getURL(path: "/api/hospital/listNtoken")!
+        let token = usuario.access_token
+        var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 50)
+        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+        request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        request.httpMethod = "GET"
+        
+        func crearHospital(desde diccionario: [String: Any]) -> Hospital {
+            let id = diccionario["id"] as! Int
+            let nombre = diccionario["nombre"] as! String
+            return Hospital(id: id, nombre: nombre)
+        }
+        conexion.dataTask(with: request) { datos, respuesta, error in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                return
+            }
+
+            guard let httpResponse = respuesta as? HTTPURLResponse, (200...299).contains(httpResponse.statusCode) else {
+                print("Error en la respuesta del servidor")
+                //print("ROOOOOLLLL")
+                //print(self.usuario.id_rol)
+                print(respuesta)
+                return
+            }
+
+            guard let datos = datos else {
+                print("No se recibieron datos del servidor")
+                return
+            }
+
+            do {
+                let json = try JSONSerialization.jsonObject(with: datos, options: []) as? [String: Any]
+                if let json = json, let resultados = json["Hospitales"] as? [[String: Any]] {
+                    for hospital in resultados {
+                        let nuevoHospital = crearHospital(desde: hospital)
+                        self.hospitales.append(nuevoHospital)
+                    }
+                    DispatchQueue.main.async {
+                        print(json)
+                        //print(self.hospitales.count)
+                        
+                        self.hospital.reloadAllComponents()
+                        
+                        /*if self.hospitales.count == 0 {
+                            self.hospital.isUserInteractionEnabled = false
+                            self.btnCrear.isEnabled = false
+                        } else {
+                            self.pkIncubadora.isUserInteractionEnabled = true
+                        }*/
+                    }
+                } else {
+                    print("El formato de los datos recibidos no es el esperado")
+                    print(json)
+                }
+            } catch {
+                print("Error al decodificar los datos JSON: \(error.localizedDescription)")
+            }
+        }.resume()
+        
+        
     }
     
     @IBAction func ocultarTeclado()
@@ -40,12 +107,13 @@ class RegistroViewController: UIViewController {
     }
     
     @IBAction func Register(_ sender: UIButton) {
+        self.showSuccess(message: "Espera...")
         validateAndRegister()
     }
     func registrar()
     {
         let conexion = URLSession(configuration: .default)
-        let url = URL(string: "http://192.168.80.101:8000/api/auth/register")!
+        let url = URLManager.sharedInstance.getURL(path: "/api/auth/register")!
         var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 50)
         request.httpMethod = "POST"
         
@@ -96,12 +164,15 @@ class RegistroViewController: UIViewController {
                     self.performSegue(withIdentifier: "sgRegister", sender: self)
                     if let data = data,
                        let jsonDict = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any],
-                       let signedRoute = jsonDict["url"] as? String {
+                       let id = jsonDict["id"] as? Int{
                         self.hasErrors = false
+                        self.usuario.id = id
                         self.usuario.name = name
                         self.usuario.lastname = last_name
                         self.usuario.email = email
                         self.usuario.password = password
+                        self.usuario.save()
+                        
                     }
                 }
             } else if statusCode == 400 {
@@ -260,18 +331,30 @@ func showSuccess(message: String) {
         completionHandler([.alert, .badge, .sound])
     }
     
-}
-
-     
-     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
-    */
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.hospitales.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let hos = hospitales[row]
+        
+        let attributes: [NSAttributedString.Key: Any] = [
+            .foregroundColor: UIColor.black
+            
+        ]
+        let attributedString = NSAttributedString(string: "\(hos.nombre)", attributes: attributes)
+        
+        return attributedString
+    }
 
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        let selectedHospital = hospitales[row]
+        print("ID del hospital: \(selectedHospital.id)")
+    }
+}
 

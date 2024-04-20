@@ -18,8 +18,8 @@ class LogInViewController: UIViewController {
     @IBOutlet weak var Errores_lbl: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        Errores_lbl.isHidden = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ocultarTeclado))
                 view.addGestureRecognizer(tapGesture)
     }
@@ -50,6 +50,8 @@ class LogInViewController: UIViewController {
     }
     
     @IBAction func LogIn(_ sender: UIButton) {
+        self.showSuccess(message: "Espera...")
+        
         guard let email = txtCorreo.text, !email.isEmpty else {
               showError(message: "Por favor, ingresa tu correo electrónico.")
               return
@@ -84,7 +86,7 @@ class LogInViewController: UIViewController {
     }
     
     func login() {
-        let url = URL(string: "http://192.168.80.101:8000/api/auth/logCode")!
+        let url = URLManager.sharedInstance.getURL(path: "/api/auth/logCode")!
         var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 50)
         request.httpMethod = "POST"
         
@@ -124,8 +126,14 @@ class LogInViewController: UIViewController {
                             print("Respuesta JSON: \(responseJSON)")
                             
                             if httpResponse.statusCode == 200 {
-                                DispatchQueue.main.async {
-                                    self.performSegue(withIdentifier: "sgVerify", sender: self)
+                                if let jsonDict = responseJSON as? [String: Any],
+                                   let rol = jsonDict["id_rol"] as? Int
+                                {
+                                    DispatchQueue.main.async {
+                                        self.usuario.id_rol = rol
+                                        self.performSegue(withIdentifier: "sgVerify", sender: self)
+                                        self.usuario.save()
+                                    }
                                 }
                             } else {
                                 if httpResponse.statusCode == 401 {
@@ -184,7 +192,16 @@ class LogInViewController: UIViewController {
         return newString.length <= maxLenght
     }
   
-    
+    func showSuccess(message: String) {
+            DispatchQueue.main.async {
+                self.Errores_lbl.isHidden = false
+                self.Errores_lbl.textColor = .green
+                self.Errores_lbl.text = message
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    self.Errores_lbl.isHidden = true
+                }
+            }
+    }
     
     
 

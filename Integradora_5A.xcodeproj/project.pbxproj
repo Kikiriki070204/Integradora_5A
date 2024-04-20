@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		88006ADE2BD2BD8A0011FC2A /* URLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88006ADD2BD2BD8A0011FC2A /* URLManager.swift */; };
+		882FAF9C2BCD7DB800F588F5 /* ContactosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FAF9B2BCD7DB800F588F5 /* ContactosViewController.swift */; };
+		882FAF9E2BCD7F1800F588F5 /* HistorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FAF9D2BCD7F1800F588F5 /* HistorialViewController.swift */; };
+		882FAFA22BCD9E5900F588F5 /* Contacto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FAFA12BCD9E5900F588F5 /* Contacto.swift */; };
+		882FAFA82BCDAC7600F588F5 /* contacte.png in Resources */ = {isa = PBXBuildFile; fileRef = 882FAFA72BCDAC7600F588F5 /* contacte.png */; };
+		882FAFAA2BCDB3AC00F588F5 /* Historial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FAFA92BCDB3AC00F588F5 /* Historial.swift */; };
+		882FAFAC2BCDB9C900F588F5 /* historial.png in Resources */ = {isa = PBXBuildFile; fileRef = 882FAFAB2BCDB9C900F588F5 /* historial.png */; };
+		882FAFAE2BCDE8EB00F588F5 /* RegistrarBebeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882FAFAD2BCDE8EB00F588F5 /* RegistrarBebeViewController.swift */; };
+		885B41372BD32A0E003B4910 /* NuevoContactoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885B41362BD32A0E003B4910 /* NuevoContactoViewController.swift */; };
+		885B41392BD34197003B4910 /* NuevoHistorialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885B41382BD34197003B4910 /* NuevoHistorialViewController.swift */; };
+		885B413B2BD3665D003B4910 /* Hospital.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885B413A2BD3665D003B4910 /* Hospital.swift */; };
 		886004812BBC981900E4CB76 /* AdminUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886004802BBC981900E4CB76 /* AdminUserViewController.swift */; };
 		886004832BBC98C400E4CB76 /* PerfilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886004822BBC98C400E4CB76 /* PerfilViewController.swift */; };
 		886004852BBC995200E4CB76 /* IncubadoraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886004842BBC995200E4CB76 /* IncubadoraViewController.swift */; };
@@ -14,6 +25,9 @@
 		886462F62BB1F9EE004396A0 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886462F52BB1F9EE004396A0 /* LogInViewController.swift */; };
 		886462F82BB1FA09004396A0 /* RegistroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886462F72BB1FA09004396A0 /* RegistroViewController.swift */; };
 		886B32442BBF341F00767E0A /* VerificarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886B32432BBF341F00767E0A /* VerificarViewController.swift */; };
+		886B778F2BC9A34600870DCC /* DetallesBebeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 886B778E2BC9A34600870DCC /* DetallesBebeViewController.swift */; };
+		886B77912BC9BFBF00870DCC /* fondo_azul.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 886B77902BC9BFBF00870DCC /* fondo_azul.jpeg */; };
+		886B77932BC9BFC900870DCC /* fondo_rosa.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 886B77922BC9BFC900870DCC /* fondo_rosa.jpeg */; };
 		8870BB682BB4A0BB00CB1490 /* logosmartnest.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8870BB672BB4A0BB00CB1490 /* logosmartnest.jpeg */; };
 		8870BB6B2BB4AB5C00CB1490 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8870BB6A2BB4AB5C00CB1490 /* UserNotifications.framework */; };
 		8870BB6D2BB4AB6500CB1490 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8870BB6C2BB4AB6500CB1490 /* EventKit.framework */; };
@@ -32,19 +46,35 @@
 		88905ACD2BBC871900E076F4 /* Ellipse 4 (1).png in Resources */ = {isa = PBXBuildFile; fileRef = 88905ACC2BBC871900E076F4 /* Ellipse 4 (1).png */; };
 		88B8A5C82BC7357100AD293F /* ActivarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8A5C72BC7357100AD293F /* ActivarViewController.swift */; };
 		88B8A5CA2BC73EE700AD293F /* Incubadora.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8A5C92BC73EE700AD293F /* Incubadora.swift */; };
-		88B8A5CC2BC73FD400AD293F /* DetalleIncuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8A5CB2BC73FD400AD293F /* DetalleIncuViewController.swift */; };
 		88B8A5CE2BC74F2200AD293F /* BebesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8A5CD2BC74F2200AD293F /* BebesViewController.swift */; };
 		88B8A5D02BC74F3900AD293F /* Bebe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88B8A5CF2BC74F3900AD293F /* Bebe.swift */; };
 		88B8A5D22BC75BD900AD293F /* baby_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 88B8A5D12BC75BD900AD293F /* baby_icon.png */; };
+		88E0F1982BD438340002686A /* BuzzerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0F1972BD438340002686A /* BuzzerViewController.swift */; };
+		88E0F19A2BD439E20002686A /* alarma.png in Resources */ = {isa = PBXBuildFile; fileRef = 88E0F1992BD439E20002686A /* alarma.png */; };
+		88E0F19C2BD443340002686A /* IncubadoraOcupada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0F19B2BD443340002686A /* IncubadoraOcupada.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		88006ADD2BD2BD8A0011FC2A /* URLManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLManager.swift; sourceTree = "<group>"; };
+		882FAF9B2BCD7DB800F588F5 /* ContactosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactosViewController.swift; sourceTree = "<group>"; };
+		882FAF9D2BCD7F1800F588F5 /* HistorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistorialViewController.swift; sourceTree = "<group>"; };
+		882FAFA12BCD9E5900F588F5 /* Contacto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contacto.swift; sourceTree = "<group>"; };
+		882FAFA72BCDAC7600F588F5 /* contacte.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = contacte.png; sourceTree = "<group>"; };
+		882FAFA92BCDB3AC00F588F5 /* Historial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Historial.swift; sourceTree = "<group>"; };
+		882FAFAB2BCDB9C900F588F5 /* historial.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = historial.png; sourceTree = "<group>"; };
+		882FAFAD2BCDE8EB00F588F5 /* RegistrarBebeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrarBebeViewController.swift; sourceTree = "<group>"; };
+		885B41362BD32A0E003B4910 /* NuevoContactoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevoContactoViewController.swift; sourceTree = "<group>"; };
+		885B41382BD34197003B4910 /* NuevoHistorialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NuevoHistorialViewController.swift; sourceTree = "<group>"; };
+		885B413A2BD3665D003B4910 /* Hospital.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hospital.swift; sourceTree = "<group>"; };
 		886004802BBC981900E4CB76 /* AdminUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminUserViewController.swift; sourceTree = "<group>"; };
 		886004822BBC98C400E4CB76 /* PerfilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerfilViewController.swift; sourceTree = "<group>"; };
 		886004842BBC995200E4CB76 /* IncubadoraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncubadoraViewController.swift; sourceTree = "<group>"; };
 		886462F52BB1F9EE004396A0 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		886462F72BB1FA09004396A0 /* RegistroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroViewController.swift; sourceTree = "<group>"; };
 		886B32432BBF341F00767E0A /* VerificarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificarViewController.swift; sourceTree = "<group>"; };
+		886B778E2BC9A34600870DCC /* DetallesBebeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetallesBebeViewController.swift; sourceTree = "<group>"; };
+		886B77902BC9BFBF00870DCC /* fondo_azul.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_azul.jpeg; sourceTree = "<group>"; };
+		886B77922BC9BFC900870DCC /* fondo_rosa.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo_rosa.jpeg; sourceTree = "<group>"; };
 		8870BB672BB4A0BB00CB1490 /* logosmartnest.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = logosmartnest.jpeg; path = ../../../Downloads/logosmartnest.jpeg; sourceTree = "<group>"; };
 		8870BB6A2BB4AB5C00CB1490 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		8870BB6C2BB4AB6500CB1490 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
@@ -66,10 +96,12 @@
 		88905ACC2BBC871900E076F4 /* Ellipse 4 (1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ellipse 4 (1).png"; sourceTree = "<group>"; };
 		88B8A5C72BC7357100AD293F /* ActivarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivarViewController.swift; sourceTree = "<group>"; };
 		88B8A5C92BC73EE700AD293F /* Incubadora.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Incubadora.swift; sourceTree = "<group>"; };
-		88B8A5CB2BC73FD400AD293F /* DetalleIncuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalleIncuViewController.swift; sourceTree = "<group>"; };
 		88B8A5CD2BC74F2200AD293F /* BebesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BebesViewController.swift; sourceTree = "<group>"; };
 		88B8A5CF2BC74F3900AD293F /* Bebe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bebe.swift; sourceTree = "<group>"; };
 		88B8A5D12BC75BD900AD293F /* baby_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = baby_icon.png; sourceTree = "<group>"; };
+		88E0F1972BD438340002686A /* BuzzerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuzzerViewController.swift; sourceTree = "<group>"; };
+		88E0F1992BD439E20002686A /* alarma.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarma.png; sourceTree = "<group>"; };
+		88E0F19B2BD443340002686A /* IncubadoraOcupada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncubadoraOcupada.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +131,11 @@
 		8877E07F2BA4B6A100BEEF4A /* integradora_img */ = {
 			isa = PBXGroup;
 			children = (
+				88E0F1992BD439E20002686A /* alarma.png */,
+				882FAFAB2BCDB9C900F588F5 /* historial.png */,
+				882FAFA72BCDAC7600F588F5 /* contacte.png */,
+				886B77922BC9BFC900870DCC /* fondo_rosa.jpeg */,
+				886B77902BC9BFBF00870DCC /* fondo_azul.jpeg */,
 				88B8A5D12BC75BD900AD293F /* baby_icon.png */,
 				88905ACC2BBC871900E076F4 /* Ellipse 4 (1).png */,
 				88905AC82BBC851F00E076F4 /* agregar.png */,
@@ -135,19 +172,30 @@
 				8881A18B2BA33EF700B2F5AE /* ViewController.swift */,
 				8881A18D2BA33EF700B2F5AE /* Main.storyboard */,
 				88B8A5CD2BC74F2200AD293F /* BebesViewController.swift */,
+				882FAFA12BCD9E5900F588F5 /* Contacto.swift */,
+				88E0F19B2BD443340002686A /* IncubadoraOcupada.swift */,
+				882FAFA92BCDB3AC00F588F5 /* Historial.swift */,
+				88E0F1972BD438340002686A /* BuzzerViewController.swift */,
+				885B413A2BD3665D003B4910 /* Hospital.swift */,
+				882FAF9B2BCD7DB800F588F5 /* ContactosViewController.swift */,
+				882FAF9D2BCD7F1800F588F5 /* HistorialViewController.swift */,
+				882FAFAD2BCDE8EB00F588F5 /* RegistrarBebeViewController.swift */,
+				885B41382BD34197003B4910 /* NuevoHistorialViewController.swift */,
 				88B8A5CF2BC74F3900AD293F /* Bebe.swift */,
 				8870BB752BB4B32800CB1490 /* MenuViewController.swift */,
 				886004842BBC995200E4CB76 /* IncubadoraViewController.swift */,
+				886B778E2BC9A34600870DCC /* DetallesBebeViewController.swift */,
 				886B32432BBF341F00767E0A /* VerificarViewController.swift */,
 				88905AC62BBC694B00E076F4 /* Usuario.swift */,
 				886004802BBC981900E4CB76 /* AdminUserViewController.swift */,
 				886004822BBC98C400E4CB76 /* PerfilViewController.swift */,
+				88006ADD2BD2BD8A0011FC2A /* URLManager.swift */,
 				886462F52BB1F9EE004396A0 /* LogInViewController.swift */,
 				886462F72BB1FA09004396A0 /* RegistroViewController.swift */,
 				8870BB772BB4B53D00CB1490 /* SplashViewController.swift */,
 				88B8A5C72BC7357100AD293F /* ActivarViewController.swift */,
 				88B8A5C92BC73EE700AD293F /* Incubadora.swift */,
-				88B8A5CB2BC73FD400AD293F /* DetalleIncuViewController.swift */,
+				885B41362BD32A0E003B4910 /* NuevoContactoViewController.swift */,
 				8877E07F2BA4B6A100BEEF4A /* integradora_img */,
 				8881A1902BA33EF900B2F5AE /* Assets.xcassets */,
 				8881A1922BA33EF900B2F5AE /* LaunchScreen.storyboard */,
@@ -214,15 +262,20 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				882FAFA82BCDAC7600F588F5 /* contacte.png in Resources */,
+				886B77932BC9BFC900870DCC /* fondo_rosa.jpeg in Resources */,
 				88905ACD2BBC871900E076F4 /* Ellipse 4 (1).png in Resources */,
 				88B8A5D22BC75BD900AD293F /* baby_icon.png in Resources */,
+				886B77912BC9BFBF00870DCC /* fondo_azul.jpeg in Resources */,
 				88905ACB2BBC85C400E076F4 /* Ellipse 4.png in Resources */,
+				882FAFAC2BCDB9C900F588F5 /* historial.png in Resources */,
 				8870BB682BB4A0BB00CB1490 /* logosmartnest.jpeg in Resources */,
 				8877E0802BA4B6A100BEEF4A /* smartnest.png in Resources */,
 				88905AC92BBC852000E076F4 /* agregar.png in Resources */,
 				8881A1942BA33EF900B2F5AE /* Base in Resources */,
 				886004862BBCA12D00E4CB76 /* Assets.xcassets in Resources */,
 				8881A18F2BA33EF700B2F5AE /* Base in Resources */,
+				88E0F19A2BD439E20002686A /* alarma.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,19 +290,30 @@
 				88B8A5D02BC74F3900AD293F /* Bebe.swift in Sources */,
 				8881A18C2BA33EF700B2F5AE /* ViewController.swift in Sources */,
 				886B32442BBF341F00767E0A /* VerificarViewController.swift in Sources */,
+				88E0F1982BD438340002686A /* BuzzerViewController.swift in Sources */,
 				88B8A5CA2BC73EE700AD293F /* Incubadora.swift in Sources */,
+				882FAFA22BCD9E5900F588F5 /* Contacto.swift in Sources */,
+				882FAFAE2BCDE8EB00F588F5 /* RegistrarBebeViewController.swift in Sources */,
+				882FAF9E2BCD7F1800F588F5 /* HistorialViewController.swift in Sources */,
 				88B8A5CE2BC74F2200AD293F /* BebesViewController.swift in Sources */,
 				886004812BBC981900E4CB76 /* AdminUserViewController.swift in Sources */,
+				88E0F19C2BD443340002686A /* IncubadoraOcupada.swift in Sources */,
+				885B41372BD32A0E003B4910 /* NuevoContactoViewController.swift in Sources */,
 				8870BB762BB4B32800CB1490 /* MenuViewController.swift in Sources */,
 				886004852BBC995200E4CB76 /* IncubadoraViewController.swift in Sources */,
 				886004832BBC98C400E4CB76 /* PerfilViewController.swift in Sources */,
-				88B8A5CC2BC73FD400AD293F /* DetalleIncuViewController.swift in Sources */,
 				8881A1882BA33EF700B2F5AE /* AppDelegate.swift in Sources */,
 				88B8A5C82BC7357100AD293F /* ActivarViewController.swift in Sources */,
 				886462F82BB1FA09004396A0 /* RegistroViewController.swift in Sources */,
+				88006ADE2BD2BD8A0011FC2A /* URLManager.swift in Sources */,
+				882FAF9C2BCD7DB800F588F5 /* ContactosViewController.swift in Sources */,
 				8881A18A2BA33EF700B2F5AE /* SceneDelegate.swift in Sources */,
 				88905AC72BBC694B00E076F4 /* Usuario.swift in Sources */,
+				885B41392BD34197003B4910 /* NuevoHistorialViewController.swift in Sources */,
+				885B413B2BD3665D003B4910 /* Hospital.swift in Sources */,
+				882FAFAA2BCDB3AC00F588F5 /* Historial.swift in Sources */,
 				8870BB782BB4B53D00CB1490 /* SplashViewController.swift in Sources */,
+				886B778F2BC9A34600870DCC /* DetallesBebeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

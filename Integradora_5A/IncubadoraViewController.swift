@@ -9,13 +9,14 @@ import UIKit
 
 class IncubadoraViewController: UIViewController {
 
-   /* @IBOutlet weak var srcIncubadoras: UIScrollView!
+    @IBOutlet weak var srcIncubadoras: UIScrollView!
     var incubadoras: [Incubadora] = []
-    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        consultarIncubadoras()
+        
     }
+   /*
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let boton = sender as! UIButton

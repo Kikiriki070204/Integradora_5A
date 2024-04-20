@@ -54,7 +54,7 @@ class VerificarViewController: UIViewController {
     
     func verificar()
     {
-        let url = URL(string: "http://192.168.80.101:8000/api/auth/verifyCode")!
+        let url = URLManager.sharedInstance.getURL(path: "/api/auth/verifyCode")!
         var request = URLRequest(url: url, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 50)
         request.httpMethod = "POST"
         
@@ -104,8 +104,19 @@ class VerificarViewController: UIViewController {
                                     DispatchQueue.main.async {
                                         self.usuario.access_token = token
                                         //print("USER DATA: \(self.usuario.access_token)")
-                                        self.performSegue(withIdentifier: "sgTab", sender: self)
-                                        self.usuario.save()}
+                                        if self.usuario.id_rol != 5
+                                        {
+                                            self.performSegue(withIdentifier: "sgTab", sender: self)
+                                            
+                                            self.usuario.save()
+                                        }
+                                        else
+                                        {
+                                            self.performSegue(withIdentifier: "sg401", sender: self)
+                                            print(self.usuario.id_rol)
+                                        }
+                                            
+                                    }
                                 }
                                     
                             } else {
