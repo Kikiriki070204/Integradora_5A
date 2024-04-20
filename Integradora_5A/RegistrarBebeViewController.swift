@@ -128,8 +128,10 @@ class RegistrarBebeViewController: UIViewController, UIPickerViewDelegate, UIPic
                     }
                 }
             } else if statusCode == 400 {
+                print(response)
                 if let data = data {
                     do {
+                        
                         let errorJSON = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]
                         if let errors = errorJSON?["errors"] as? [String: Any],
                            let emailErrors = errors["email"] as? [String],

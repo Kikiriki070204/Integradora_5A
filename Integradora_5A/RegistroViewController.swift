@@ -122,13 +122,16 @@ class RegistroViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         let email = Correo.text!
         let password =  Password.text!
         let password_confirmation = Password_conf.text!
+        let hospitalSeleccionado = hospitales[hospital.selectedRow(inComponent: 0)]
         
+        let hospital_id = hospitalSeleccionado.id
         let requestBody: [String: Any] = [
             "name": name,
             "last_name":last_name,
             "email": email,
             "password": password,
-            "confirm_password": password_confirmation
+            "confirm_password": password_confirmation,
+            "id_hospital": hospital_id
         ]
         
         do {

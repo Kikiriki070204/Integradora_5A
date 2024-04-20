@@ -905,7 +905,7 @@ Activa su respectiva alarma según su folio:</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wbG-50-FdH">
-                                <rect key="frame" x="0.0" y="422.99999999999994" width="428" height="185.33333333333331"/>
+                                <rect key="frame" x="0.0" y="423" width="428" height="185"/>
                                 <connections>
                                     <outlet property="dataSource" destination="I1Z-tf-Dt7" id="N1x-ki-rTs"/>
                                     <outlet property="delegate" destination="I1Z-tf-Dt7" id="8zS-6D-5pd"/>
@@ -1432,10 +1432,10 @@ Te hemos enviado un correo para que la actives. Cuando la hayas activado presion
             </objects>
             <point key="canvasLocation" x="2550.7246376811595" y="3084.375"/>
         </scene>
-        <!--Detalles Incubadora View Controller-->
+        <!--Sensores View Controller-->
         <scene sceneID="XcG-Wq-g5S">
             <objects>
-                <viewController id="Ahd-p4-kuX" customClass="DetallesIncubadoraViewController" customModule="Integradora_5A" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Ahd-p4-kuX" customClass="SensoresViewController" customModule="Integradora_5A" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="P9M-lc-Gaq">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="916"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1446,18 +1446,30 @@ Te hemos enviado un correo para que la actives. Cuando la hayas activado presion
                                 <color key="textColor" red="0.14509806040000001" green="0.22745099660000001" blue="0.44705885649999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NtX-pP-ogQ">
+                                <rect key="frame" x="0.0" y="143" width="428" height="696"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="oRj-SE-mKE"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="vCh-y4-lpX"/>
+                            </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="BL0-lK-nhb"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="NtX-pP-ogQ" firstAttribute="centerX" secondItem="P9M-lc-Gaq" secondAttribute="centerX" id="65W-G7-VTk"/>
+                            <constraint firstItem="NtX-pP-ogQ" firstAttribute="width" secondItem="P9M-lc-Gaq" secondAttribute="width" id="8CI-0i-Kgo"/>
+                            <constraint firstItem="NtX-pP-ogQ" firstAttribute="top" secondItem="sKq-oz-91V" secondAttribute="bottom" constant="10" id="ISI-ZX-eTM"/>
+                            <constraint firstItem="BL0-lK-nhb" firstAttribute="bottom" secondItem="NtX-pP-ogQ" secondAttribute="bottom" constant="10" id="p7h-0K-dPP"/>
                             <constraint firstItem="sKq-oz-91V" firstAttribute="centerX" secondItem="P9M-lc-Gaq" secondAttribute="centerX" id="tjn-My-Poa"/>
                             <constraint firstItem="sKq-oz-91V" firstAttribute="top" secondItem="BL0-lK-nhb" secondAttribute="top" constant="40" id="vtQ-6l-Drj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrSensores" destination="NtX-pP-ogQ" id="ip4-MN-4Kz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ij-Zb-fRa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3352" y="3031"/>
+            <point key="canvasLocation" x="3351.8691588785045" y="3030.4535637149029"/>
         </scene>
         <!--Registrar Bebe View Controller-->
         <scene sceneID="hmm-wf-7hW">
@@ -2018,9 +2030,8 @@ Te hemos enviado un correo para que la actives. Cuando la hayas activado presion
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ecM-bb-846"/>
-        <segue reference="0Fo-rd-enX"/>
-        <segue reference="Fc6-xa-OF8"/>
+        <segue reference="7jf-PH-oNd"/>
+        <segue reference="29d-Ch-Gao"/>
         <segue reference="3Yr-Nu-eyR"/>
         <segue reference="ZN1-n8-j9X"/>
     </inferredMetricsTieBreakers>

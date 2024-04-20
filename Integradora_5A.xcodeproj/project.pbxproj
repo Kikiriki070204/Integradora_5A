@@ -52,6 +52,13 @@
 		88E0F1982BD438340002686A /* BuzzerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0F1972BD438340002686A /* BuzzerViewController.swift */; };
 		88E0F19A2BD439E20002686A /* alarma.png in Resources */ = {isa = PBXBuildFile; fileRef = 88E0F1992BD439E20002686A /* alarma.png */; };
 		88E0F19C2BD443340002686A /* IncubadoraOcupada.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0F19B2BD443340002686A /* IncubadoraOcupada.swift */; };
+		88E0F19E2BD472250002686A /* Sensor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0F19D2BD472250002686A /* Sensor.swift */; };
+		88E0F1A02BD472A50002686A /* SensoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E0F19F2BD472A50002686A /* SensoresViewController.swift */; };
+		88E0F1AC2BD47F560002686A /* 3159161.png in Resources */ = {isa = PBXBuildFile; fileRef = 88E0F1AB2BD47F560002686A /* 3159161.png */; };
+		88E0F1B12BD480E30002686A /* pu.png in Resources */ = {isa = PBXBuildFile; fileRef = 88E0F1AD2BD480E30002686A /* pu.png */; };
+		88E0F1B22BD480E30002686A /* temperatura.png in Resources */ = {isa = PBXBuildFile; fileRef = 88E0F1AE2BD480E30002686A /* temperatura.png */; };
+		88E0F1B32BD480E30002686A /* aire.png in Resources */ = {isa = PBXBuildFile; fileRef = 88E0F1AF2BD480E30002686A /* aire.png */; };
+		88E0F1B42BD480E30002686A /* buzz.png in Resources */ = {isa = PBXBuildFile; fileRef = 88E0F1B02BD480E30002686A /* buzz.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +109,13 @@
 		88E0F1972BD438340002686A /* BuzzerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuzzerViewController.swift; sourceTree = "<group>"; };
 		88E0F1992BD439E20002686A /* alarma.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alarma.png; sourceTree = "<group>"; };
 		88E0F19B2BD443340002686A /* IncubadoraOcupada.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncubadoraOcupada.swift; sourceTree = "<group>"; };
+		88E0F19D2BD472250002686A /* Sensor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sensor.swift; sourceTree = "<group>"; };
+		88E0F19F2BD472A50002686A /* SensoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensoresViewController.swift; sourceTree = "<group>"; };
+		88E0F1AB2BD47F560002686A /* 3159161.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3159161.png; sourceTree = "<group>"; };
+		88E0F1AD2BD480E30002686A /* pu.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pu.png; sourceTree = "<group>"; };
+		88E0F1AE2BD480E30002686A /* temperatura.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = temperatura.png; sourceTree = "<group>"; };
+		88E0F1AF2BD480E30002686A /* aire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aire.png; sourceTree = "<group>"; };
+		88E0F1B02BD480E30002686A /* buzz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = buzz.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +145,11 @@
 		8877E07F2BA4B6A100BEEF4A /* integradora_img */ = {
 			isa = PBXGroup;
 			children = (
+				88E0F1AF2BD480E30002686A /* aire.png */,
+				88E0F1B02BD480E30002686A /* buzz.png */,
+				88E0F1AD2BD480E30002686A /* pu.png */,
+				88E0F1AE2BD480E30002686A /* temperatura.png */,
+				88E0F1AB2BD47F560002686A /* 3159161.png */,
 				88E0F1992BD439E20002686A /* alarma.png */,
 				882FAFAB2BCDB9C900F588F5 /* historial.png */,
 				882FAFA72BCDAC7600F588F5 /* contacte.png */,
@@ -173,10 +192,12 @@
 				8881A18D2BA33EF700B2F5AE /* Main.storyboard */,
 				88B8A5CD2BC74F2200AD293F /* BebesViewController.swift */,
 				882FAFA12BCD9E5900F588F5 /* Contacto.swift */,
+				88E0F19D2BD472250002686A /* Sensor.swift */,
 				88E0F19B2BD443340002686A /* IncubadoraOcupada.swift */,
 				882FAFA92BCDB3AC00F588F5 /* Historial.swift */,
 				88E0F1972BD438340002686A /* BuzzerViewController.swift */,
 				885B413A2BD3665D003B4910 /* Hospital.swift */,
+				88E0F19F2BD472A50002686A /* SensoresViewController.swift */,
 				882FAF9B2BCD7DB800F588F5 /* ContactosViewController.swift */,
 				882FAF9D2BCD7F1800F588F5 /* HistorialViewController.swift */,
 				882FAFAD2BCDE8EB00F588F5 /* RegistrarBebeViewController.swift */,
@@ -264,17 +285,22 @@
 			files = (
 				882FAFA82BCDAC7600F588F5 /* contacte.png in Resources */,
 				886B77932BC9BFC900870DCC /* fondo_rosa.jpeg in Resources */,
+				88E0F1B32BD480E30002686A /* aire.png in Resources */,
 				88905ACD2BBC871900E076F4 /* Ellipse 4 (1).png in Resources */,
 				88B8A5D22BC75BD900AD293F /* baby_icon.png in Resources */,
 				886B77912BC9BFBF00870DCC /* fondo_azul.jpeg in Resources */,
 				88905ACB2BBC85C400E076F4 /* Ellipse 4.png in Resources */,
+				88E0F1AC2BD47F560002686A /* 3159161.png in Resources */,
 				882FAFAC2BCDB9C900F588F5 /* historial.png in Resources */,
 				8870BB682BB4A0BB00CB1490 /* logosmartnest.jpeg in Resources */,
 				8877E0802BA4B6A100BEEF4A /* smartnest.png in Resources */,
 				88905AC92BBC852000E076F4 /* agregar.png in Resources */,
+				88E0F1B42BD480E30002686A /* buzz.png in Resources */,
 				8881A1942BA33EF900B2F5AE /* Base in Resources */,
+				88E0F1B22BD480E30002686A /* temperatura.png in Resources */,
 				886004862BBCA12D00E4CB76 /* Assets.xcassets in Resources */,
 				8881A18F2BA33EF700B2F5AE /* Base in Resources */,
+				88E0F1B12BD480E30002686A /* pu.png in Resources */,
 				88E0F19A2BD439E20002686A /* alarma.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88E0F19E2BD472250002686A /* Sensor.swift in Sources */,
 				886462F62BB1F9EE004396A0 /* LogInViewController.swift in Sources */,
 				88B8A5D02BC74F3900AD293F /* Bebe.swift in Sources */,
 				8881A18C2BA33EF700B2F5AE /* ViewController.swift in Sources */,
@@ -307,6 +334,7 @@
 				886462F82BB1FA09004396A0 /* RegistroViewController.swift in Sources */,
 				88006ADE2BD2BD8A0011FC2A /* URLManager.swift in Sources */,
 				882FAF9C2BCD7DB800F588F5 /* ContactosViewController.swift in Sources */,
+				88E0F1A02BD472A50002686A /* SensoresViewController.swift in Sources */,
 				8881A18A2BA33EF700B2F5AE /* SceneDelegate.swift in Sources */,
 				88905AC72BBC694B00E076F4 /* Usuario.swift in Sources */,
 				885B41392BD34197003B4910 /* NuevoHistorialViewController.swift in Sources */,
